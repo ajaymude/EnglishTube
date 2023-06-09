@@ -43,8 +43,10 @@ const getGrammarData = async (req, res) => {
     const { topic, chapter } = req.params;
     console.log("33", topic, chapter);
     if (topic == "grammar") {
+      console.log("33", topic, chapter);
       const data = await GrammarModel.findOne({ topic: chapter });
-      res.send({ msg: "get data", data });
+      console.log("33", topic, chapter , data);
+      res.send({ msg: "get data", data }); 
     } else if (topic == "vocab") {
       const data = await VocabModal.findOne({ topic: chapter });
       res.send({ msg: "get data", data });

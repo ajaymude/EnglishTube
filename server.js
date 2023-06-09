@@ -24,7 +24,7 @@ app.use("/", UserRoutes);
 app.use("/", VocabRoute); 
 
 app.get("/", (req, res) => {
-  res.send("this is testing"); 
+  res.send("this is testing");   
 });
 
 app.listen(process.env.PORT, () => console.log("server is runnig on 8000 port"));
